@@ -2,6 +2,15 @@ version: "2.2"
 
 dependencies:
   - project: madisonewebb/joda-time
+    mapping:
+      dependencies:
+        default:
+          - source: main
+            target: master
+      dependant:
+        default:
+          - source: master
+            target: main
   - project: madisonewebb/spring-petclinic
     dependencies:
       - project: madisonewebb/joda-time
